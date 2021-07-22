@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="343dp"
+        android:layout_height="305dp"
+        android:alpha="0.7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        app:cardCornerRadius="40dp"
+        android:background="@drawable/img_bg"
+        app:cardBackgroundColor="@color/black">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp">
+            <TextView
+                android:id="@+id/tentp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Tên thành phố"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tenquocgia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Tên quốc gia"
+                android:layout_below="@id/tentp"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/nhietdo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tenquocgia"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="25°C"
+                android:textColor="@color/white"
+                android:textSize="60dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/nhietdo"
+                android:id="@+id/icon"/>
+
+            <TextView
+                android:id="@+id/bautroi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nhietdo"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Trời nắng"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/doam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bautroi"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Độ ẩm 60%"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_coronavirus"
+            android:layout_centerHorizontal="true"
+            android:elevation="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardsearch"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.5"
+            app:cardCornerRadius="60dp"
+            android:layout_marginLeft="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <EditText
+
+                    android:id="@+id/search"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview"
+        android:layout_centerHorizontal="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:alpha="0.7"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            android:background="@drawable/img_bg"
+            app:cardBackgroundColor="@color/black" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/icontocdo"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_anemometer" />
+
+                <TextView
+                    android:id="@+id/tocdogio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="10 m/s"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/icontocdo" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:alpha="0.7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cardview2"
+            app:cardCornerRadius="20dp"
+            android:background="@drawable/img_bg"
+            app:cardBackgroundColor="@color/black" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iconapsuat"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_gauge" />
+
+                <TextView
+                    android:id="@+id/apsuat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="1000 mb"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/iconapsuat" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:alpha="0.7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cardview3"
+            app:cardCornerRadius="20dp"
+            android:background="@drawable/img_bg"
+            app:cardBackgroundColor="@color/black" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iconmay"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_clouds" />
+
+                <TextView
+                    android:id="@+id/may"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="15 %"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/iconmay" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:alpha="0.7"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cardview4"
+            app:cardCornerRadius="20dp"
+            android:background="@drawable/img_bg"
+            app:cardBackgroundColor="@color/black" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iconhot"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_hot" />
+
+                <TextView
+                    android:id="@+id/maxmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="33/33"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/iconhot" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/circularFillableLoaders"
+       android:layout_centerHorizontal="true">
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="76dp"
+           android:layout_height="76dp"
+           android:layout_marginTop="-2dp"
+           app:srcCompat="@drawable/ic_umbrella2"
+           tools:ignore="VectorDrawableCompat" />
+
+       <ImageView
+           android:id="@+id/imageView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/imageView"
+           android:layout_marginTop="10dp"
+           app:srcCompat="@drawable/ic_group_1307"
+           tools:ignore="VectorDrawableCompat" />
+   </RelativeLayout>
+
+    <com.mikhaellopez.circularfillableloaders.CircularFillableLoaders
+        android:id="@+id/circularFillableLoaders"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wheather"
+        app:cfl_border="true"
+        android:layout_marginTop="220dp"
+        app:cfl_border_width="6dp"
+        app:cfl_progress="80"
+        app:cfl_wave_amplitude="0.06"
+        app:cfl_wave_color="#59ffff" />
+
+</RelativeLayout>
